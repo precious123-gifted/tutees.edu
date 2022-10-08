@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/precious123-gifted/tutees.edu/static/css/main.d665a537.css",
-    "main.js": "/precious123-gifted/tutees.edu/static/js/main.33cfe8a7.js",
+    "main.css": "/precious123-gifted/tutees.edu/static/css/main.dd602aa2.css",
+    "main.js": "/precious123-gifted/tutees.edu/static/js/main.ed68cfac.js",
     "static/js/787.f74e09b5.chunk.js": "/precious123-gifted/tutees.edu/static/js/787.f74e09b5.chunk.js",
     "static/media/girlNsky.jpg": "/precious123-gifted/tutees.edu/static/media/girlNsky.f580f2bb576abd4396c2.jpg",
     "static/media/KWHLAQ.jpg": "/precious123-gifted/tutees.edu/static/media/KWHLAQ.49780f5f8d3dda5dccf9.jpg",
@@ -25,12 +25,12 @@
     "static/media/livelessons.png": "/precious123-gifted/tutees.edu/static/media/livelessons.2e09b0837c0561bfe9be.png",
     "static/media/logo.png": "/precious123-gifted/tutees.edu/static/media/logo.d6f87439c3fa94fbb897.png",
     "index.html": "/precious123-gifted/tutees.edu/index.html",
-    "main.d665a537.css.map": "/precious123-gifted/tutees.edu/static/css/main.d665a537.css.map",
-    "main.33cfe8a7.js.map": "/precious123-gifted/tutees.edu/static/js/main.33cfe8a7.js.map",
+    "main.dd602aa2.css.map": "/precious123-gifted/tutees.edu/static/css/main.dd602aa2.css.map",
+    "main.ed68cfac.js.map": "/precious123-gifted/tutees.edu/static/js/main.ed68cfac.js.map",
     "787.f74e09b5.chunk.js.map": "/precious123-gifted/tutees.edu/static/js/787.f74e09b5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d665a537.css",
-    "static/js/main.33cfe8a7.js"
+    "static/css/main.dd602aa2.css",
+    "static/js/main.ed68cfac.js"
   ]
 }
