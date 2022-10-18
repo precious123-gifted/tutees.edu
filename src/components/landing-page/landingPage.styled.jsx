@@ -4,7 +4,7 @@ import LandingBG from '../../assets/landingpage.png'
 
 
 
-export const LandingPageStyled = styled.div`
+export const LandingPageStyled = styled.div `
 
 @media only screen and (min-width: 600px) and (orientation: landscape) {
     height:100vh;
@@ -36,6 +36,7 @@ flex-direction:column;
         width:97;
         display:flex;
         position:absolute;
+        display:none;
         
     }
     .container{
@@ -96,6 +97,7 @@ align-items:center;
     }
 }
        }
+     
        .BTN{
         top:80%;
         position:absolute;
@@ -217,6 +219,9 @@ align-items:center;
     }
 }
        }
+       .logob{
+        display:none;
+       }
        .BTN{
         top:80%;
         position:absolute;
@@ -281,7 +286,11 @@ flex-direction:column;
     .logo{
        position:absolute; 
        right:50vw;
-       bottom:18vw;
+       top:70vh;
+       img{
+     width:50vw;
+    }
+      
         
     }
     .container{
@@ -302,11 +311,11 @@ flex-direction:column;
       
        .headerTXT{
         color:#11d174;
-        font-size: 3rem;
+        font-size: 10vw;
         
        }
       .slideTXT{
-        font-size: 3rem;
+        font-size: 10vw;
         color:#f6f6f6;
       }
     }
@@ -349,7 +358,7 @@ align-items:center;
        .BTN{
         top:86%;
         position:absolute;
-        width:170px;
+        width:45vw;
         height:50px;
 background-color:#f4f4f4;
 color:#00130A;
@@ -357,7 +366,7 @@ display:flex;
 justify-content:center;
 align-items:center;
 border: 2px solid #000A05;
-            font-size: 20px;
+            font-size: 5vw;
             border-radius  :15px ;
    
     cursor:pointer;

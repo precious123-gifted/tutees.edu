@@ -1,7 +1,7 @@
 {
     "name": "TUTEES-EDUCATIONAL-INTERVENTIONS",
     "version": "0.1.2",
-    "homepage": "https://github.com/precious123-gifted/tutees.edu",
+    "homepage": "https://precious123-gifted.github.io/tutees.edu/",
     "private": true,
     "dependencies": {
         "gsap": "^3.11.2",

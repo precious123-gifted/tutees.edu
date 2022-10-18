@@ -12,6 +12,7 @@ import BG3 from '../../assets/bg3.png'
 import BG4 from '../../assets/bg4.png'
 import BG5 from '../../assets/bg5.png'
 import logo from '../../assets/logo.png'
+import logob from '../../assets/logob.png'
 import {gsap,Power2,Power3,Power4,Circ,Elastic} from 'gsap'
 import { NavLink } from 'react-router-dom'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -251,7 +252,7 @@ return ()=>{
 <div className="content">
     
 <div className="logo">
-<img src={logo} alt="" srcset="" />
+<img src={logo} alt="" srcSet="" />
 </div>
     <div className="container">
      <div className="section1">
@@ -271,6 +272,9 @@ return ()=>{
     <div className="bubble"><div className="active"></div></div>
     <div className="bubble"><div className="active"></div></div>
     <div className="bubble"><div className="active"></div></div>
+</div>
+<div style={{position:'absolute'}} className='logob'>
+    <img src={logob} alt="" srcSet=""/>
 </div>
 <NavLink to={'/home'} className="BTN" style={{textDecoration:'none'}}> <div >
    <span className='BTN-text'>Get Started</span>

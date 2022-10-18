@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const NavBar = styled.div`
+export const NavBar = styled.div `
 
 @media only screen and (min-width: 600px) and (orientation: landscape) {
     border-bottom: 2px solid #000A05;
@@ -34,7 +34,7 @@ align-items:center;
 }
 .list-and-button-div{
     height:100%;
-    width:70%;
+    width:90%;
     display:flex;
     justify-content:space-between;
     .list-div{
@@ -60,12 +60,12 @@ align-items:center;
         .services-list{
             transition: 0.6s ease-in all;
             border-top: 2px solid #000a05;
-            margin-top: 210px;
-            height:80px;
+            margin-top: 300px;
             position:absolute;
-          opacity:0;
+          opacity:1;
+        
             width:230px;
-            height:150px;
+            height:230px;
             background-color:#0E5E37;
             display:flex;
             flex-direction: column;
@@ -97,7 +97,7 @@ align-items:center;
     }
     }
     .button-div{
-        width:30%;
+        width:25%;
           border-right: 2px solid #000A05;
           padding-right: 5px;
         display:flex;
@@ -229,21 +229,20 @@ align-items:center;
             
             transition: 0.6s ease-in all;
             border-top: 2px solid #000a05;
-            margin-top: 210px;
-            height:80px;
+            margin-top: 290px;
             position:absolute;
-          opacity:0;
+          visibility:hidden;
             width:230px;
-            height:150px;
+            height:240px;
             background-color:#0E5E37;
             
             display:flex;
             flex-direction: column;
             justify-content:space-between;
             padding-left: 10px;
-            right:70vw;
-            display:none;
-            visibility:hidden;
+            
+            
+            
      div{
         border-bottom: 1px solid #000A05;
      }       

@@ -7,7 +7,7 @@ import lessonIcon from '../../assets/livelessons.png'
 import ChildIcon from '../../assets/child.png'
 import libryIcon from '../../assets/videolib.png'
 import leplanIcon from '../../assets/learningplan.png'
-import Line from '../Line/Line'
+import Line from '../Line/Line.jsx'
 import { AppContext } from '../../App.jsx';
 import { useContext } from 'react'
 import { useRef,useEffect } from 'react'

@@ -6,6 +6,7 @@ import Threeicon from '../../assets/3icon.png'
 import { AppContext } from '../../App.jsx';
 import { useContext } from 'react'
 import { useRef,useEffect } from 'react'
+import { NavLink } from 'react-router-dom';
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -143,16 +144,15 @@ displayBTN()
               <div className="write-up">
                 <span>Tell us where you need help.
                   Connect with professionals in all subjects 
-                  and skills you might want to learn.</span>
+                  and skills you might want your child to learn.</span>
               </div>
             </div>
             <div className='step2 step'>
             <div className="number"><img src={Twoicon} alt="" srcset="" /></div>
             <div className="write-up">
               <span>
-              We match you up with a tutor.
-              We offer you the perfect tutor to work with your
-               qualifications and requirements.
+              We match your child up with a tutor.
+              We offer your child the perfect tutor to work with your requirements.
               </span>
             </div>
             </div>
@@ -160,15 +160,15 @@ displayBTN()
             <div className="number"><img src={Threeicon} alt="" srcset="" /></div>
             <div className="write-up">
               <span>
-                Meet your Tutor.
-                Take a convenient time to meet your tutor and
-                 start your lessons with the learning option of your choice.
+                Meet the Tutor.
+                Take a convenient time to meet the tutor and
+                 start  lessons with the learning option of your choice.
               </span>
             </div>
             </div>
 
             <div className="btn">
-              <span>Get A Tutor</span>
+               <span className='GAT list'><NavLink style={{textDecoration:'none',color:'inherit'}} to={'/get-a-tutor'}>Get A Tutor</NavLink></span>
             </div>
           </div>
         </div>

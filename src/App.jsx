@@ -1,24 +1,15 @@
 
 import "./App.css";
-import LandingPage from "./components/landing-page/landingPage";
-import HomePage from "./components/homepage/HomePage";
-
-import Blog from "./components/blog/Blog";
-
-
-
-
-import GetATutorForm from "./components/Get-tutor-form/GetATutorForm";
-import TutorForm from "./components/Tutor-form/TutorForm";
-import Line from "./components/Line/Line";
-
-import { BrowserRouter, Route, Router, Routes, } from "react-router-dom";
+import LandingPage from "./components/landing-page/landingPage.jsx";
+import HomePage from "./components/homepage/HomePage.jsx";
+import Blog from "./components/blog/Blog.jsx";
+import GetATutorForm from "./components/Get-tutor-form/GetATutorForm.jsx";
+import TutorForm from "./components/Tutor-form/TutorForm.jsx";
+import {Route, Router, Routes,} from "react-router-dom";
 import { createContext, useContext, useEffect, useState } from "react";
 import { useRef } from "react";
 import {gsap} from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-
-
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -65,7 +56,7 @@ useEffect(()=>{
 
   return (
     
-    <BrowserRouter>   
+    
      
 
         
@@ -75,22 +66,17 @@ useEffect(()=>{
    
      
     <Routes>
-   <Route path="/" element={ <LandingPage/>}/>   
+   <Route  path="/" element={ <LandingPage/>} />   
 <Route path="/home" element={ <HomePage/>}/>
    <Route path="/blog" element={ <Blog/>}/>
     <Route path="/get-a-tutor" element={ <GetATutorForm/>}/>
     <Route path="/become-a-tutor" element={ <TutorForm/>}/>
     </Routes>
-
-      
-     
-     
-   
-     
+    
         </div>
       </AppContext.Provider>
       
-      </BrowserRouter>
+    
   );
 }
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import LineStyle from '../../assets/line-style.png'
 
-import {Linestyle} from './Line.styled';
+import {Linestyle} from './Line.styled.jsx';
 
 
 export class Line extends Component {

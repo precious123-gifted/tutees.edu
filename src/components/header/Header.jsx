@@ -1,6 +1,6 @@
 import React, { Component, useContext } from 'react'
 import {HEader} from './Header.styled.jsx'
-import { useRef } from 'react'
+import { useRef,useState } from 'react'
 import { useEffect } from 'react'
 import {gsap,Circ,Elastic,Power0,Power1,Power2} from 'gsap'
 import headerIll from '../../assets/header-ill.png'
@@ -23,6 +23,7 @@ const Header = () => {
 const{about} = useContext(AppContext)
 const{header} = useContext(AppContext)
 const{how} = useContext(AppContext)
+const{why} = useContext(AppContext)
 const{nav}=useContext(AppContext)
 const{contact}=useContext(AppContext)
 const{app}=useContext(AppContext)
@@ -35,68 +36,70 @@ const{setGetTutorForm} = useContext(AppContext)
 const{becomeATUtor} = useContext(AppContext)
 const{setBecomeATutor} = useContext(AppContext)
 
+const [serviceVisibility,setServiceVisibility] = useState(false)
+const NOV  = serviceVisibility === true?'visible':serviceVisibility === false?'hidden':null
 
-function scrollFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("navbar").style.padding = "30px 10px";
-    document.getElementById("logo").style.fontSize = "25px";
-  } else {
-    document.getElementById("navbar").style.padding = "80px 10px";
-    document.getElementById("logo").style.fontSize = "35px";
-  }
-} 
+const portraitView = window.matchMedia('(max-width: 1050px) and (max-height: 3050px) and (orientation: portrait)')
 
 
-
-
-  useEffect(()=>{
-    let About = about.current
+const functionToScrollHeaderElementsToView = () =>{
+let About = about.current
     let Contact = contact.current
     let Header = header.current
     let writeUp = header.current.querySelector('.write-up')
   let BTN = header.current.querySelector('.btn')
   let section2 = header.current.querySelector('.section2')
   let Nav = nav.current
-    
 
-// window.addEventListener('scroll',()=>{
-//   console.log(Header.getBoundingClientRect().top)
-//   let rect = Header.getBoundingClientRect()
-//   if (rect.top > '-640') {
-//    alert('ok noted')
-//   }  
-// })
-  
+
   gsap.to(writeUp,2,{marginLeft:0,ease:Power2.easeIn,})
   gsap.to(BTN,3,{opacity: 1,marginLeft:0,ease:Power2.easeIn})
   gsap.to(section2,1.6,{opacity: 1,marginRight:0,ease:Power2.easeIn})
 
-  gsap.to(Nav,4,{opacity:1,top:0,ease:Power2.easeIn,})
+  gsap.to(Nav,3,{opacity:1,top:0,ease:Power2.easeIn,})
 
-   
-  let aboutBTN = Header.querySelectorAll('.aboutBTN')
-let contactBTN = Header.querySelectorAll('.contactBTN')
-  
+
+}
+
+const functionToScrollToAboutPage = () =>{
+    let Header = header.current
+let aboutBTN = Header.querySelectorAll('.aboutBTN')
+ let About = about.current
+
   aboutBTN.forEach(btn => {
       btn.addEventListener('click',()=>{ 
     console.log('shakabom')
   About.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest",duration:1.5})
   })
   });
+}
+const functionToScrollToContactPage = () =>{
+  let Header = header.current
+    let Contact = contact.current
+let contactBTN = Header.querySelectorAll('.contactBTN')
+
   contactBTN.forEach(btn => {
       btn.addEventListener('click',()=>{ 
     console.log('shakabom')
   Contact.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest",duration:1.5})
   })
   });
+
+
+}
   
+const functionToScrollToWhyChooseUsPage = () =>{
+let whyChooseUsTXT =  header.current.querySelector('.chooseBTN')
+let whyChooseUsPage = why.current
 
 
+whyChooseUsTXT.addEventListener('click',()=>{
 
-  },)
+whyChooseUsPage.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest",duration:1.5})
+})
+}
 
-  
-const slideMenuInAndOut = () =>{
+const functionToSlideMenuInAndOut = () =>{
 let menu = header.current.querySelector('.menuDiv')
 let openIcon = header.current.querySelector('.menuIcon')
 let closeIcon = header.current.querySelector('.exitIcon')
@@ -113,7 +116,7 @@ closeIcon.addEventListener('click',()=>{
   })
 }
 
-const displayBlog = () =>{
+const functionToDisplayBlog = () =>{
   let blogBTN = header.current.querySelectorAll('.blog')
 blogBTN.forEach(btn => {
    btn.addEventListener('click',()=>{
@@ -124,7 +127,7 @@ blogBTN.forEach(btn => {
 });
  
 }
-const displayGetTutorForm = () =>{
+const functionToDisplayGetTutorForm = () =>{
   let getTutorBTN = header.current.querySelectorAll('.GAT')
 getTutorBTN.forEach(btn => {
    btn.addEventListener('click',()=>{
@@ -136,7 +139,7 @@ getTutorBTN.forEach(btn => {
  
 }
 
-const displayBecomeATutorForm = () =>{
+const functionToDisplayBecomeATutorForm = () =>{
   let becomeTutorBTN = header.current.querySelectorAll('.BAT')
 becomeTutorBTN.forEach(btn => {
    btn.addEventListener('click',()=>{
@@ -147,7 +150,7 @@ becomeTutorBTN.forEach(btn => {
 });
  
 }
-const displayHeaderContent = () =>{
+const functionToDisplayHeaderContent = () =>{
 
   let writeUp = header.current.querySelector('.write-up')
   let BTN = header.current.querySelector('.btn')
@@ -233,36 +236,80 @@ const displayHeaderContent = () =>{
   });
 
 }
+const setServiceTextClickEventListener = () =>{
+let servicesTXT = header.current.querySelectorAll('.services-TXT')
+ 
+
+if(portraitView.matches){
+servicesTXT.forEach(btn => {
+  
+  btn.addEventListener('click',()=>{ 
+    setServiceVisibility(!serviceVisibility)
+    console.log(serviceVisibility)
+    
+  
+ 
+  })
+});}
+
+}
+
+const  functionToToggleServiceListState = () =>{
+let servicesList = header.current.querySelectorAll('.services-list')
+servicesList.forEach(x=>{ 
+      x.style.visibility = NOV
+    })
+
+}
+
+const setServiceTextHoverEventListener = () =>{
+let servicesTXT = header.current.querySelectorAll('.services-TXT')
+
+servicesTXT.forEach(btn => {
+  
+  btn.addEventListener('mouseover',()=>{ 
+    setServiceVisibility(true)
+    console.log(serviceVisibility)
+  })
+   btn.addEventListener('mouseleave',()=>{ 
+    setServiceVisibility(false)
+    console.log(serviceVisibility)
+  })
+});
 
 
 
+}
+
+const functionToScrollToTop = () =>{
+let logo = header.current.querySelector('.logo')
+let Header = header.current
+
+
+logo.addEventListener('click',()=>{
+Header.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest",duration:1.5})
+
+})
+
+}
 
 
 
 useEffect(()=>{
-  displayBlog()
-  slideMenuInAndOut()
-  displayHeaderContent()
-  displayGetTutorForm()
-  displayBecomeATutorForm()
- let servicesTXT = header.current.querySelectorAll('.services-TXT')
- let servicesList = header.current.querySelectorAll('.services-list')
-
-servicesTXT.forEach(btn=>{ 
-  btn.addEventListener('mouseover',()=>{
-    
-
- })
-
-
- btn.addEventListener('mouseleave',()=>{
-  servicesList.forEach(x=>{ 
-      x.style.opacity = 0
-    })
-  
-  })
-})
-
+functionToDisplayBlog()
+functionToSlideMenuInAndOut()
+functionToDisplayHeaderContent()
+functionToDisplayGetTutorForm()
+functionToDisplayBecomeATutorForm()
+functionToScrollHeaderElementsToView()
+functionToScrollToTop()
+functionToScrollToWhyChooseUsPage()
+functionToToggleServiceListState()
+functionToScrollToAboutPage()
+functionToScrollToContactPage()
+setServiceTextClickEventListener()
+setServiceTextHoverEventListener()
+ 
 
 })
 
@@ -271,7 +318,7 @@ servicesTXT.forEach(btn=>{
        <NavBar className='nav' ref={nav}>
         <div className='content'>
 <div className='logo-div'>
-  <span><img src={logo} alt="" srcset="" /></span>
+  <span><img src={logo} className='logo' alt="" srcset="" /></span>
   <div className="menuIcon">
     <img src={burgerIcon} alt="" srcset="" />
 </div>
@@ -285,10 +332,12 @@ servicesTXT.forEach(btn=>{
 
       <div className='services-TXT list' >Services</div>
     <div className='services-list'>
-      <div>Home Work</div>
-      <div>In person learning</div>
-      <div>Live lessons</div>
-      <div>E-learning</div>
+      <div>Montessori early years education</div>
+      <div>Home Work Help</div>
+      <div>Virtual lessons</div>
+      <div>In-person learning support</div>
+      <div>Learning challenge interventions</div>
+      <div>E-Videos</div>
       <div>
 Examinations Prep(SAT,Check Point,IGCSE,WAEC,NECO,
 National Common Entrance.</div>
@@ -312,16 +361,19 @@ National Common Entrance.</div>
 
       <div className='services-TXT list' >Services</div>
     <div className='services-list'>
-      <div>Home Work</div>
-      <div>In person learning</div>
-      <div>Live lessons</div>
-      <div>E-learning</div>
+      <div>Montessori early years education</div>
+      <div>Home Work Help</div>
+      <div>Virtual lessons</div>
+      <div>In-person learning support</div>
+      <div>Learning challenge interventions</div>
+      <div>E-Videos</div>
       <div>
 Examinations Prep(SAT,Check Point,IGCSE,WAEC,NECO,
 National Common Entrance.</div>
      
       </div></span>
     <span className='blog list'><NavLink style={{textDecoration:'none',color:'inherit'}} to={'/blog'}>Blog</NavLink></span>
+    <span className='chooseBTN list'>Why Choose Us</span>
     <span className='aboutBTN list'>About Us</span>
     <span className='BAT list'><NavLink style={{textDecoration:'none',color:'inherit'}} to={'/become-a-tutor'}>Become A Tutor</NavLink></span>
     
@@ -331,9 +383,9 @@ National Common Entrance.</div>
     <div className='signup-div contactBTN'>
       <span>Contact Us</span>
     </div>
-    {/* <div className='login-div'>
+     <div className='login-div'>
       <span>Login</span>
-    </div> */}
+    </div> 
   </div>
 </div>
         </div>
@@ -343,7 +395,7 @@ National Common Entrance.</div>
         <div className='write-up'>
           <span>
           Hire The Best Tutors
-For Your Academic
+For Your Child's Academic
 Success
           </span>
         </div>
