@@ -4,8 +4,7 @@ export const TutorFormStyled = styled.div `
     
     @media only screen and (min-width: 600px) and (orientation: landscape) {
  color:#00130A;  
-margin-top: 4vw;
-width:100vw;
+width:100%;
 display:flex;
 flex-direction: column;
 align-items:center;
@@ -13,7 +12,7 @@ padding-bottom: 5vw;
 
 
 .forms{
-width:80%;
+width:100%;
 display:flex;
 flex-direction: column;
 align-items:center;
@@ -23,7 +22,7 @@ font-size:1.5vw;
 .form1{
     background-color:#0e5d3734; 
     border-radius: 20px;
-    width:80%;
+    width:100%;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -265,7 +264,8 @@ width:10vw;
      position:absolute;
        background-color:#0e5d3734; 
     border-radius: 20px;
-    width:80%;
+    width:100%;
+   
 display:flex;
 flex-direction:column ;
 justify-content:center;
@@ -306,7 +306,8 @@ font-size: 2.4vw;
 margin-bottom: 7vw;}
 
 .content{
-    width:70%;
+    height: fit-content;
+    width:90%;
     display:flex;
     flex-direction:column ;
     justify-content:space-between ;
@@ -392,7 +393,7 @@ justify-content:center;
 align-items:center;
       background-color:#0e5d3734; 
     border-radius: 20px;
-    width:80%;
+    width:100%;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -401,13 +402,13 @@ align-items:center;
  margin-bottom: 13vw;
 
 .content{
-width:80%;
+     height: fit-content;
+width:90%;
 display:flex;
 flex-direction:column ;
 align-items:center;
 
 .header{
-width: 100vw;
 font-size: 3vw;
 margin-bottom: 7vw;
 display:flex;

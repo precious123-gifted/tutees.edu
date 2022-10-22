@@ -52,12 +52,18 @@ functionToSwitchToRegistrationForm()
 
 </div>
 
-{
-form === false? <div className="header">
+<div className="header">
     <div className="header__content">
 <div className='IMG-div'>
 
 </div>
+
+<div className="section2">
+
+
+
+{
+form === false ? 
 <div className='writeup-div'>
     <div className="writeup-div__header">
         <span>
@@ -77,10 +83,14 @@ Did you know that there are over 500,000 parents in Nigeria willing to pay the p
     <span>Get Started</span>
 </div>
 </div>
+ 
+ : form === true ? <TutorForm/> : null
 
-    </div>
-</div> : form === true ? <TutorForm/> : null
 }
+
+</div>
+    </div>
+</div> 
 
 
 

@@ -11,7 +11,7 @@ align-items: center;
 
 .content{
 width:100vw;
-
+height: 100vh;
 display:flex;
 flex-direction: column;
 align-items:center;
@@ -56,6 +56,8 @@ align-items: center;
 
 .header{
     width: 100%;
+    height: 100%;
+    overflow: hidden;
 display:flex;
 justify-content: center;
 align-items: center;
@@ -64,22 +66,30 @@ align-items: center;
    background-position:left;
 &__content{
    width: 90%;
+   height: 100%;
     display:flex;
 justify-content: space-between;
-align-items: center;
+
 
 .IMG-div{
     border: 7px solid #00130A;
     border-radius:20px;
    width:30%;
-   height: 45vw;
+   height: 95%;
    background-image:url(${Tutor});
  background-repeat: no-repeat;
 }
+
+
+.section2{
+height: 100%;
+width:50%;
+overflow: auto;
+padding-right: 30px;
 .writeup-div{
     font-size: 1.5vw;
- width:50%;
- height:fit-content;
+ width:100%;
+ height:100%;
  background-color:#ffff;
 &__header{
 margin-bottom: 3vw;
@@ -105,13 +115,14 @@ padding-right: 7px;
 width:10vw;
 height: 3vw;
 margin-top: 20px;
+margin-bottom: 30px;
 &:hover{
 background-color: white;
 color:#000A05 ;
 }
 }
  
- 
+}
  
 }
 
