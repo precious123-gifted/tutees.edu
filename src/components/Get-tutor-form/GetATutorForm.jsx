@@ -15,7 +15,7 @@ const form = useRef(null)
   <GAT ref={form}>
           <form method='POST' action='https://formspree.io/f/mgeqzpoo'>
 <div className="form">
-<span style={{height:'20vw',width:'100%',display:'flex',alignItems:'center'}}>  <span><img src={Logo} alt="" srcset="" /> </span><span style={{fontSize:'3vw',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'flex-start'}}> <span>TUTEES EDUCATIONAL INTERVENTIONS <br />HOME SCHOOL</span> </span>  </span>
+<span className='company-head' style={{height:'20vw',width:'100%',display:'flex',alignItems:'center'}}>  <span><img src={Logo} alt="" srcset="" /> </span><span style={{fontSize:'3vw',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'flex-start'}}> <span>TUTEES EDUCATIONAL INTERVENTIONS <br />HOME SCHOOL</span> </span>  </span>
 
 <div className="content">
     

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ContactStyle = styled.div`
+export const ContactStyle = styled.div `
 
 @media only screen and (min-width: 600px) and (orientation: landscape) {
 width:100vw;
@@ -128,7 +128,7 @@ border-radius:10px;
 
     input{
         &:focus{
-            font-size: 3.5vw;
+            font-size: 1.9vw;
         outline:2px solid #00130A;
 
     }

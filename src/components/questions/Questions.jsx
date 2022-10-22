@@ -12,7 +12,7 @@ export class Questions extends Component {
           </div>
           <div className="write-up">
             <span className='text'>If you have any questions or you want to  reach out to us,contact us here</span>
-            <span className='email-number'><span>email</span><span>+234 813 127 4889</span></span>
+            <span className='email-number'><span>tutees.edu11@gmail.com</span><span>+234 813 127 4889</span></span>
           </div>
         </div>
       </QUestions>

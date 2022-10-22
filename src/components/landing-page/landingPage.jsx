@@ -5,6 +5,7 @@ import { easings } from 'react-spring'
 import { TweenLite } from 'gsap/gsap-core'
 import { TweenMax } from 'gsap/gsap-core'
 import { useContext } from 'react'
+import {useNavigate } from 'react-router-dom'
 import { LandingPageStyled } from './landingPage.styled.jsx'
 import BG1 from '../../assets/landingpage.png'
 import BG2 from '../../assets/bg2.png'
@@ -28,7 +29,9 @@ gsap.registerPlugin(TweenLite)
 
 export default function LandingPage() {
 
-    
+     const navigate = useNavigate();
+
+
     let slidingTXT = [
         'EXPAND YOUR LEARNING WITH INDIVIDUAL EDUCATIONAL PERFORMANCE',
 'OVERCOME YOUR ACADEMIC CHALLENGES',
@@ -54,24 +57,34 @@ BG5
     const{landingPage} = useContext(AppContext)
     const{setLandingPage} = useContext(AppContext)
     const llandingPage = useRef(null)
-    
+   
+    const Delay = (e) => {
+    e.preventDefault()
+    setTimeout(() => {
+        e.unpreventDefault() //make this work
+    },2000)
+}
+
 const animationOnClickingGetStartedBTN = () =>{
 let getStartedBTN = llandingPage.current.querySelector('.BTN')
 let buttonTXT = llandingPage.current.querySelector('.BTN-text')
 
 
-let effect = getStartedBTN.addEventListener('click',()=>{
+let effect = getStartedBTN.addEventListener('click',(e)=>{
     let LandingPage = llandingPage.current
     let slideText = LandingPage.querySelector('.slideTXT')
+ 
     
-    
-    
+ 
+      
+
+
     setTimeout(() => {
-        
+        navigate('/home')
        setHome(true)
     setLandingPage(false) 
         
-    },2000); 
+    },1800); 
    
     TweenMax.to( getStartedBTN,0.10,
      {ease:Circ.easeIn,autoAlpha:1,width:'100%',height:'790px',top:0,right:0,bottom:0,
@@ -227,12 +240,7 @@ let animation = setInterval(() => {
 
 
 
-const Delay = (e) => {
-    e.preventDefault()
-    setTimeout(() => {
-        e.unpreventDefault() //make this work
-    },500)
-}
+
 
 
 
@@ -276,9 +284,9 @@ return ()=>{
 <div style={{position:'absolute'}} className='logob'>
     <img src={logob} alt="" srcSet=""/>
 </div>
-<NavLink to={'/home'} className="BTN" style={{textDecoration:'none'}}> <div >
+<div  className="BTN" style={{textDecoration:'none'}}> <div >
    <span className='BTN-text'>Get Started</span>
-</div></NavLink>
+</div></div>
 </div>   
     </div>
 

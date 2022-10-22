@@ -233,7 +233,10 @@ justify-content:center;
 align-items:center;
  padding-top: 5vw;
  padding-bottom: 5vw;
-
+.company-head{
+visibility:hidden;
+position:absolute;
+}
 .content{
    width:90%;
    display:flex;

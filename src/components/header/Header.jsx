@@ -14,6 +14,7 @@ import {AppContext} from '../../App.jsx'
 import {NavBar} from './nav/Nav.styled.jsx'
 
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 

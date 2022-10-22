@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/tutees.edu/static/css/main.dd602aa2.css",
-    "main.js": "/tutees.edu/static/js/main.7a6cdec2.js",
+    "main.js": "/tutees.edu/static/js/main.83c7e847.js",
     "static/js/787.f74e09b5.chunk.js": "/tutees.edu/static/js/787.f74e09b5.chunk.js",
     "static/media/girlNsky.jpg": "/tutees.edu/static/media/girlNsky.f580f2bb576abd4396c2.jpg",
+    "static/media/flower-background.png": "/tutees.edu/static/media/flower-background.b5fdc0d305a1abf45749.png",
     "static/media/KWHLAQ.jpg": "/tutees.edu/static/media/KWHLAQ.49780f5f8d3dda5dccf9.jpg",
     "static/media/bg4.png": "/tutees.edu/static/media/bg4.e927259f1724a6ddeaab.png",
     "static/media/humbleleader.jpg": "/tutees.edu/static/media/humbleleader.a0416ea159c2a4dbc229.jpg",
@@ -14,6 +15,7 @@
     "static/media/bg5.png": "/tutees.edu/static/media/bg5.046e1c852739ba8cb933.png",
     "static/media/bg2.png": "/tutees.edu/static/media/bg2.e22fa0f225dc096e8621.png",
     "static/media/tutorbg.png": "/tutees.edu/static/media/tutorbg.0fa6067ee053414e15a7.png",
+    "static/media/tutor.jpg": "/tutees.edu/static/media/tutor.c026d18740668b35dbd2.jpg",
     "static/media/header-ill.png": "/tutees.edu/static/media/header-ill.3eee9e57fd5111b106b4.png",
     "static/media/child.png": "/tutees.edu/static/media/child.acf9cc2049f909fd5355.png",
     "static/media/personal-learning.png": "/tutees.edu/static/media/personal-learning.9b8d45096b3f885efdab.png",
@@ -27,11 +29,11 @@
     "static/media/logo.png": "/tutees.edu/static/media/logo.d6f87439c3fa94fbb897.png",
     "index.html": "/tutees.edu/index.html",
     "main.dd602aa2.css.map": "/tutees.edu/static/css/main.dd602aa2.css.map",
-    "main.7a6cdec2.js.map": "/tutees.edu/static/js/main.7a6cdec2.js.map",
+    "main.83c7e847.js.map": "/tutees.edu/static/js/main.83c7e847.js.map",
     "787.f74e09b5.chunk.js.map": "/tutees.edu/static/js/787.f74e09b5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dd602aa2.css",
-    "static/js/main.7a6cdec2.js"
+    "static/js/main.83c7e847.js"
   ]
 }

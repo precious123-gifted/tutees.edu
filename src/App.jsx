@@ -5,6 +5,7 @@ import HomePage from "./components/homepage/HomePage.jsx";
 import Blog from "./components/blog/Blog.jsx";
 import GetATutorForm from "./components/Get-tutor-form/GetATutorForm.jsx";
 import TutorForm from "./components/Tutor-form/TutorForm.jsx";
+import TutorLandingPage  from './components/Tutor-landing-page/TutorLandingPage.jsx'
 import {Route, Router, Routes,} from "react-router-dom";
 import { createContext, useContext, useEffect, useState } from "react";
 import { useRef } from "react";
@@ -60,7 +61,7 @@ useEffect(()=>{
      
 
         
- <AppContext.Provider value={{app,about,nav,header,how,why,contact,bet,home,setHome,blog,setBlog,landingPage,setLandingPage,becomeATutor,setBecomeATutor,getTutorForm,setGetTutorForm}}>
+ <AppContext.Provider value={{app,about,nav,foot,header,how,why,contact,bet,home,setHome,blog,setBlog,landingPage,setLandingPage,becomeATutor,setBecomeATutor,getTutorForm,setGetTutorForm}}>
     <div className="App" ref={app}> 
     
    
@@ -70,7 +71,7 @@ useEffect(()=>{
 <Route path="/home" element={ <HomePage/>}/>
    <Route path="/blog" element={ <Blog/>}/>
     <Route path="/get-a-tutor" element={ <GetATutorForm/>}/>
-    <Route path="/become-a-tutor" element={ <TutorForm/>}/>
+    <Route path="/become-a-tutor" element={ <TutorLandingPage/>}/>
     </Routes>
     
         </div>

@@ -20,8 +20,8 @@ const {contact} = useContext(AppContext)
 <div className="content">
     <div className="contact">
 <div className="header"><span>Get In Touch</span></div>
-<div className="whatsapp"><img src={whatsapplogo} alt="" srcset="" /><span>+234 813 127 4889</span></div>
-<div className="email"><img src={emaillogo} alt="" srcset="" /><span>mail</span></div>
+<div className="whatsapp"><a href="https://wa.me/+2348131274889" target="_blank"><img src={whatsapplogo} alt="" srcset="" /></a><span>+234 813 127 4889</span></div>
+<div className="email"><a href = "mailto: tutees.edu11@gmail.com"><img src={emaillogo} alt="" srcset="" /></a><span>tutees.edu11@gmail.com</span></div>
 
     </div>
 
@@ -29,9 +29,11 @@ const {contact} = useContext(AppContext)
 <div className="header"><span>Follow Us</span></div>
 <div className="socials">
 <span className="fb"><img src={fblogo} alt="" srcset="" /></span>
-<span className="insta"><img src={instalogo} alt="" srcset="" /></span>
+<span className="insta"><a target = "blank" href = 'https://instagram.com/akhigbe.r?igshid=YmMyMTA2M2Y='><img src={instalogo} alt="" srcset="" /></a></span>
 <span className="youtube"><img src={youtubelogo} alt="" srcset="" /></span>
-<span className="twitter"><img src={twitterlogo} alt="" srcset="" /></span>
+                      <span className="twitter"><a target = "blank" href = 'https://twitter.com/TuteesEdu11'><img src={twitterlogo} alt="" srcset="" /></a> </span>
+
+                     
     
 </div>
 </div>
