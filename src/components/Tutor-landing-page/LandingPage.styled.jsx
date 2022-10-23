@@ -214,22 +214,23 @@ padding-right: 30px;
 .writeup-div{
     border-radius: 15px;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 4vw;
+    
  width:90%;
  height:fit-content;
  background-color:#ffff;
  padding: 10px;
 &__header{
 margin-bottom: 2.4vw;
-font-size: 6vw;
+font-size: 7vw;
 }
 
  &__write-up{
-line-height:2vw;
+
 word-spacing: 0.8vw;
+font-size: 5vw;
 }.btn{
 border: 2px solid #0c693b;
-font-size: 3.2vw;
+font-size: 6vw;
 border-radius: 2vw;
 display: flex;
 justify-content: center;
@@ -240,8 +241,8 @@ background-color: #000A05;
 color: white;
 padding-left: 7px;
 padding-right: 7px;
-width:24vw;
-height: 9vw;
+width:40vw;
+height: 14vw;
 margin-top: 20px;
 margin-bottom: 30px;
 &:hover{
