@@ -206,22 +206,22 @@ justify-content: space-between;
 
 .section2{
    margin-top: -40vw;
-    margin-left: 20vw;
-width:80vw;
+    margin-left: 10vw;
+width:90vw;
 padding-right: 30px;
 
 
 .writeup-div{
     border-radius: 15px;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 3.5vw;
+    font-size: 4vw;
  width:90%;
  height:fit-content;
  background-color:#ffff;
  padding: 10px;
 &__header{
 margin-bottom: 2.4vw;
-font-size: 5.3vw;
+font-size: 6vw;
 }
 
  &__write-up{
@@ -229,7 +229,7 @@ line-height:2vw;
 word-spacing: 0.8vw;
 }.btn{
 border: 2px solid #0c693b;
-font-size: 2.3vw;
+font-size: 3.2vw;
 border-radius: 2vw;
 display: flex;
 justify-content: center;
@@ -240,8 +240,8 @@ background-color: #000A05;
 color: white;
 padding-left: 7px;
 padding-right: 7px;
-width:20vw;
-height: 7vw;
+width:24vw;
+height: 9vw;
 margin-top: 20px;
 margin-bottom: 30px;
 &:hover{
