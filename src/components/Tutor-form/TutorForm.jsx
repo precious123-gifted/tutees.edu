@@ -1,16 +1,19 @@
 import React, { useContext,useState, useEffect } from 'react'
 import { TutorFormStyled } from './TutorForm.styled.jsx'
 import {AppContext} from '../../App.jsx'
-import { useRef } from 'react'
+
 
 
 export default function TutorForm() {
     const{becomeATUtor} = useContext(AppContext)
     const{setBecomeATutor} = useContext(AppContext)
+const{form} = useContext(AppContext)
+const{tutorLandingPage} = useContext(AppContext)
+    
 
     var uploadedIMG = ''
 
-const form  = useRef(null)
+
 
 const [Form1,setForm1] = useState(true)
 const [Form2,setForm2] = useState(false)
@@ -18,6 +21,45 @@ const [Form3,setForm3] = useState(false)
 
 
 
+
+const functionToTrackStepTwo = () =>{
+
+
+let textTwo = tutorLandingPage.current.querySelector('.two')
+// let nextBTNToTwo = form.current.querySelector('.nextButtonToForm2')
+let nextButtonToForm2 = form.current.querySelector('.nextButtonToForm2')
+
+
+nextButtonToForm2.addEventListener('click',()=>{
+
+textTwo.style.color = '#F9BA15'
+
+
+
+})
+
+
+}
+
+
+const functionToTrackStepThree = () =>{
+
+
+let textThree = tutorLandingPage.current.querySelector('.three')
+// let nextBTNToTwo = form.current.querySelector('.nextButtonToForm2')
+let nextButtonToForm3 = form.current.querySelector('.nextButtonToForm3')
+
+
+nextButtonToForm3.addEventListener('click',()=>{
+
+textThree.style.color = '#F9BA15'
+
+
+
+})
+
+
+}
 
 const displayProfileImage = () =>{
 let uploadBTN = form.current.querySelector('.uploadBTN')
@@ -37,7 +79,7 @@ reader.readAsDataURL(file)
 }
 
 const functionToDisplayFormTwo = () =>{
-let nextButtonToForm2 = form.current.querySelector('.nextButtonToForm2')
+let nextButtonToForm2 =form .current.querySelector('.nextButtonToForm2')
 let form2 = form.current.querySelector('.form2')
 let form1 = form.current.querySelector('.form1')
 
@@ -79,8 +121,9 @@ useEffect(()=>{
 displayProfileImage()
 functionToDisplayFormTwo()
 functionToDisplayFormThree()
-
-})
+functionToTrackStepTwo ()
+functionToTrackStepThree()
+},[])
   return (
    <TutorFormStyled ref={form}>
     <form action='https://formspree.io/f/mrgdloqk'  method='POST' className='forms'>

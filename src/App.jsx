@@ -36,8 +36,8 @@ const how = useRef(null)
 const bet = useRef(null)
 const ques = useRef(null)
 const foot = useRef(null)
-
-
+const form = useRef(null)
+const tutorLandingPage = useRef(null)
 
 
 
@@ -61,7 +61,7 @@ useEffect(()=>{
      
 
         
- <AppContext.Provider value={{app,about,nav,foot,header,how,why,contact,bet,home,setHome,blog,setBlog,landingPage,setLandingPage,becomeATutor,setBecomeATutor,getTutorForm,setGetTutorForm}}>
+ <AppContext.Provider value={{app,about,nav,form,foot,header,how,why,contact,bet,home,setHome,blog,setBlog,landingPage,setLandingPage,becomeATutor,setBecomeATutor,getTutorForm,tutorLandingPage,setGetTutorForm}}>
     <div className="App" ref={app}> 
     
    

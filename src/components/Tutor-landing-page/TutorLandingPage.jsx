@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { LandingPageStyled } from './LandingPage.styled';
 import Logo from '../../assets/logo1.png'
 import One from '../../assets/icon-one.png'
@@ -7,20 +7,23 @@ import Three from '../../assets/icon-three.png'
 import Four from '../../assets/icon-four.png'
 import Five from '../../assets/icon-five.png'
 import TutorForm from '../Tutor-form/TutorForm';
+import {AppContext} from '../../App.jsx'
+import Tutor from '../../assets/tutor.jpg'
 
 
 
 
 const LandingPage = () => {
-const [form,setForm] = useState(false)
-const landingPage = useRef(null)
+const [Form,setForm] = useState(false)
+const{form} = useContext(AppContext)
+const{tutorLandingPage} = useContext(AppContext)
+
 
 const functionToSwitchToRegistrationForm = () =>{
     
-    let getStartedBTN = landingPage.current.querySelector('.btn')
+    let getStartedBTN = tutorLandingPage.current.querySelector('.btn')
    getStartedBTN.addEventListener('click',()=>{
 setForm(true)
-
 
 })
 
@@ -29,13 +32,44 @@ setForm(true)
     };
 }
 
+const functionToTrackStepOne = () =>{
+
+let getStartedBTN = tutorLandingPage.current.querySelector('.btn')
+let textOne = tutorLandingPage.current.querySelector('.one')
+
+
+getStartedBTN.addEventListener('click',()=>{
+
+textOne.style.color = '#F9BA15'
+
+
+
+})
+
+
+}
+
+
+
+
 
 useEffect(() => {
 functionToSwitchToRegistrationForm()
+functionToTrackStepOne()
+
+
 }, []);
 
+
+useEffect(() => {
+// functionToTrackStepTwo()
+
+
+}, []);
+
+
     return (
-        <LandingPageStyled ref={landingPage}>
+        <LandingPageStyled ref={tutorLandingPage}>
 <div className="content">
 <div className="nav">
     <div className="nav__content">
@@ -55,7 +89,7 @@ functionToSwitchToRegistrationForm()
 <div className="header">
     <div className="header__content">
 <div className='IMG-div'>
-
+<img src={Tutor} alt="" srcset="" />
 </div>
 
 <div className="section2">
@@ -63,7 +97,7 @@ functionToSwitchToRegistrationForm()
 
 
 {
-form === false ? 
+Form === false ? 
 <div className='writeup-div'>
     <div className="writeup-div__header">
         <span>
@@ -84,7 +118,7 @@ Did you know that there are over 500,000 parents in Nigeria willing to pay the p
 </div>
 </div>
  
- : form === true ? <TutorForm/> : null
+ : Form === true ? <TutorForm/> : null
 
 }
 

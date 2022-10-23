@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tutees.edu/static/css/main.dd602aa2.css",
-    "main.js": "/tutees.edu/static/js/main.83c7e847.js",
+    "main.js": "/tutees.edu/static/js/main.eaa0601e.js",
     "static/js/787.f74e09b5.chunk.js": "/tutees.edu/static/js/787.f74e09b5.chunk.js",
     "static/media/girlNsky.jpg": "/tutees.edu/static/media/girlNsky.f580f2bb576abd4396c2.jpg",
     "static/media/flower-background.png": "/tutees.edu/static/media/flower-background.b5fdc0d305a1abf45749.png",
@@ -29,11 +29,11 @@
     "static/media/logo.png": "/tutees.edu/static/media/logo.d6f87439c3fa94fbb897.png",
     "index.html": "/tutees.edu/index.html",
     "main.dd602aa2.css.map": "/tutees.edu/static/css/main.dd602aa2.css.map",
-    "main.83c7e847.js.map": "/tutees.edu/static/js/main.83c7e847.js.map",
+    "main.eaa0601e.js.map": "/tutees.edu/static/js/main.eaa0601e.js.map",
     "787.f74e09b5.chunk.js.map": "/tutees.edu/static/js/787.f74e09b5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dd602aa2.css",
-    "static/js/main.83c7e847.js"
+    "static/js/main.eaa0601e.js"
   ]
 }
