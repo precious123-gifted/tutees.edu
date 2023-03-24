@@ -1,6 +1,6 @@
 # React with Bun runtime
 
-This is a React project bootstrapped with [bun](https://bun.sh/).
+This is a React project bootstrapped with [bun](https://bun.sh/).a
 
 ## Getting Started
 
